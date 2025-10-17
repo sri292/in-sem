@@ -1,0 +1,17 @@
+git init
+git add .
+git commit -m "Initial commit with project files"
+git checkout -b feature-login
+# edit app.js
+git add app.js
+git commit -m "Added login feature in app.js"
+git checkout main
+# edit style.css
+git add style.css
+git commit -m "Updated background color in style.css"
+git merge feature-login
+# resolve conflicts if any
+git diff
+git reset --soft HEAD~1
+git checkout -- style.css
+git tag v1.0
